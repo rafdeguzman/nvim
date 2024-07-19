@@ -54,13 +54,6 @@
       "command": "workbench.action.showCommands"
     },
     {
-      "key": "/",
-      "name": "comment",
-      "type": "command",
-      "command": "vscode-neovim.send",
-      "args": "<C-/>"
-    },
-    {
       "key": "?",
       "name": "View All References",
       "type": "command",
@@ -871,24 +864,6 @@
           "name": "Toggle full screen",
           "type": "command",
           "command": "workbench.action.toggleFullScreen"
-        },
-        {
-          "key": "s",
-          "name": "Select theme",
-          "type": "command",
-          "command": "workbench.action.selectTheme"
-        },
-        {
-          "key": "m",
-          "name": "Toggle maximized panel",
-          "type": "command",
-          "command": "workbench.action.toggleMaximizedPanel"
-        },
-        {
-          "key": "T",
-          "name": "Toggle tab visibility",
-          "type": "command",
-          "command": "workbench.action.toggleEditorTabsVisibility"
         }
       ]
     },
@@ -984,25 +959,6 @@
       "command": "workbench.view.extensions"
     },
     {
-      "key": "y",
-      "name": "Sync...",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": "d",
-          "name": "Download Settings",
-          "type": "command",
-          "command": "extension.downloadSettings"
-        },
-        {
-          "key": "u",
-          "name": "Upload Settings",
-          "type": "command",
-          "command": "extension.updateSettings"
-        }
-      ]
-    },
-    {
       "key": "z",
       "name": "Toggle zen mode",
       "type": "command",
@@ -1013,12 +969,6 @@
       "name": "Find Files",
       "type": "command",
       "command": "workbench.action.quickOpen"
-    },
-    {
-      "key": "G",
-      "name": "LazyGit",
-      "type": "command",
-      "command": "lazygit.openLazygit"
     }
   ],
   "workbench.sideBar.location": "right",
@@ -1067,4 +1017,4 @@
   "terminal.explorerKind": "external",
   "terminal.integrated.defaultProfile.osx": "zsh"
 }
-
+
