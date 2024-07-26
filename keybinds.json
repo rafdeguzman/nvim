@@ -115,7 +115,7 @@
     "when": "hasOtherSuggestions && textInputFocus && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
   },
   {
-    "key": "ctrl+l",
+    "key": "ctrl+h",
     "when": "sideBarFocus",
     "command": "workbench.action.focusActiveEditorGroup"
   },

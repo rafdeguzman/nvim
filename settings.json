@@ -1,7 +1,7 @@
 {
   // Font stuffs
   "editor.fontFamily": "FiraCode Nerd Font Mono",
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
 
   // Font size
   "editor.fontSize": 12,
@@ -46,6 +46,12 @@
       "name": "Close file",
       "type": "command",
       "command": "workbench.action.closeActiveEditor"
+    },
+    {
+      "key": "D",
+      "name": "Go to Definition",
+      "type": "command",
+      "command": "editor.action.revealDefinition"
     },
     {
       "key": ";",
@@ -1015,6 +1021,8 @@
   "errorLens.gutterIconsFollowCursorOverride": false,
   "workbench.activityBar.location": "hidden",
   "terminal.explorerKind": "external",
-  "terminal.integrated.defaultProfile.osx": "zsh"
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "codesnap.realLineNumbers": true,
+  "codesnap.shutterAction": "copy"
 }
 
