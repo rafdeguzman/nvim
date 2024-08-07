@@ -1,24 +1,8 @@
 [
-  // {
-  //   "key": "shift+ctrl+e",
-  //   "command": "actions.findWithSelection"
-  // },
-  // {
-  //   "key": "ctrl+e",
-  //   "command": "-actions.findWithSelection"
-  // },
   {
     "key": "ctrl+n",
     "command": "workbench.view.explorer"
   },
-  // {
-  //   "key": "shift+ctrl+n",
-  //   "command": "-workbench.view.explorer"
-  // },
-  // {
-  //   "key": "shift+ctrl+n",
-  //   "command": "workbench.action.toggleSidebarVisibility"
-  // },
   {
     "key": "r",
     "command": "renameFile",

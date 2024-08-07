@@ -6,9 +6,6 @@
   // Font size
   "editor.fontSize": 12,
   "terminal.integrated.fontSize": 12,
-
-  // ui
-  "editor.minimap.enabled": false,
   "window.commandCenter": false,
   "editor.scrollbar.vertical": "hidden",
   "window.titleBarStyle": "custom",
@@ -40,18 +37,6 @@
       "name": "Show Todos",
       "type": "command",
       "command": "workbench.view.extension.todo-tree-container"
-    },
-    {
-      "key": "w",
-      "name": "Save file",
-      "type": "command",
-      "command": "workbench.action.files.save"
-    },
-    {
-      "key": "q",
-      "name": "Close file",
-      "type": "command",
-      "command": "workbench.action.closeActiveEditor"
     },
     {
       "key": "D",
@@ -120,13 +105,13 @@
           "command": "workbench.action.closeOtherEditors"
         },
         {
-          "key": "n",
+          "key": "]",
           "name": "Next editor",
           "type": "command",
           "command": "workbench.action.nextEditor"
         },
         {
-          "key": "p",
+          "key": "[",
           "name": "Previous editor",
           "type": "command",
           "command": "workbench.action.previousEditor"
@@ -233,12 +218,6 @@
           "command": "debug.jumpToCursor"
         },
         {
-          "key": "v",
-          "name": "REPL",
-          "type": "command",
-          "command": "workbench.debug.action.toggleRepl"
-        },
-        {
           "key": "w",
           "name": "Focus on watch window",
           "type": "command",
@@ -258,6 +237,13 @@
       "type": "command",
       // "command": "workbench.action.toggleSidebarVisibility"
       "command": "workbench.view.explorer"
+    },
+    {
+      "key": "F",
+      "name": "Format Document",
+      "type": "command",
+      "command": "editor.action.formatDocument",
+      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
     },
     {
       "key": "f",
@@ -286,196 +272,10 @@
       ]
     },
     {
-      "key": "g",
-      "name": "Git...",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": "/",
-          "name": "Search Commits",
-          "command": "gitlens.showCommitSearch",
-          "type": "command",
-          "when": "gitlens:enabled && config.gitlens.keymap == 'alternate'"
-        },
-        {
-          "key": "a",
-          "name": "Stage",
-          "type": "command",
-          "command": "git.stage"
-        },
-        {
-          "key": "b",
-          "name": "Checkout",
-          "type": "command",
-          "command": "git.checkout"
-        },
-        {
-          "key": "B",
-          "name": "Browse",
-          "type": "command",
-          "command": "gitlens.openFileInRemote"
-        },
-        {
-          "key": "c",
-          "name": "Commit",
-          "type": "command",
-          "command": "git.commit"
-        },
-        {
-          "key": "C",
-          "name": "Cherry Pick",
-          "type": "command",
-          "command": "gitlens.views.cherryPick"
-        },
-        {
-          "key": "d",
-          "name": "Delete Branch",
-          "type": "command",
-          "command": "git.deleteBranch"
-        },
-        {
-          "key": "f",
-          "name": "Fetch",
-          "type": "command",
-          "command": "git.fetch"
-        },
-        {
-          "key": "F",
-          "name": "Pull From",
-          "type": "command",
-          "command": "git.pullFrom"
-        },
-        {
-          "key": "g",
-          "name": "Graph",
-          "type": "command",
-          "command": "git-graph.view"
-        },
-        {
-          "key": "h",
-          "name": "Heatmap",
-          "type": "command",
-          "command": "gitlens.toggleFileHeatmap"
-        },
-        {
-          "key": "H",
-          "name": "History",
-          "type": "command",
-          "command": "git.viewFileHistory"
-        },
-        {
-          "key": "i",
-          "name": "Init",
-          "type": "command",
-          "command": "git.init"
-        },
-        {
-          "key": "j",
-          "name": "Next Change",
-          "type": "command",
-          "command": "workbench.action.editor.nextChange"
-        },
-        {
-          "key": "k",
-          "name": "Previous Change",
-          "type": "command",
-          "command": "workbench.action.editor.previousChange"
-        },
-        {
-          "key": "l",
-          "name": "Toggle Line Blame",
-          "type": "command",
-          "command": "gitlens.toggleLineBlame",
-          "when": "editorTextFocus && gitlens:canToggleCodeLens && gitlens:enabled && config.gitlens.keymap == 'alternate'"
-        },
-        {
-          "key": "L",
-          "name": "Toggle GitLens",
-          "type": "command",
-          "command": "gitlens.toggleCodeLens",
-          "when": "editorTextFocus && gitlens:canToggleCodeLens && gitlens:enabled && config.gitlens.keymap == 'alternate'"
-        },
-        {
-          "key": "m",
-          "name": "Merge",
-          "type": "command",
-          "command": "git.merge"
-        },
-        {
-          "key": "p",
-          "name": "Push",
-          "type": "command",
-          "command": "git.push"
-        },
-        {
-          "key": "P",
-          "name": "Pull",
-          "type": "command",
-          "command": "git.pull"
-        },
-        {
-          "key": "s",
-          "name": "Stash",
-          "type": "command",
-          "command": "workbench.view.scm"
-        },
-        {
-          "key": "S",
-          "name": "Status",
-          "type": "command",
-          "command": "gitlens.showQuickRepoStatus",
-          "when": "gitlens:enabled && config.gitlens.keymap == 'alternate'"
-        },
-        {
-          "key": "t",
-          "name": "Create Tag",
-          "type": "command",
-          "command": "git.createTag"
-        },
-        {
-          "key": "T",
-          "name": "Delete Tag",
-          "type": "command",
-          "command": "git.deleteTag"
-        },
-        {
-          "key": "U",
-          "name": "Unstage",
-          "type": "command",
-          "command": "git.unstage"
-        }
-      ]
-    },
-    {
       "key": "h",
       "name": "Split Horizontal",
       "type": "command",
       "command": "workbench.action.splitEditorDown"
-    },
-    {
-      "key": "i",
-      "name": "Insert...",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": "j",
-          "name": "Insert line below",
-          "type": "command",
-          "command": "editor.action.insertLineAfter"
-        },
-        {
-          "key": "k",
-          "name": "Insert line above",
-          "type": "command",
-          "command": "editor.action.insertLineBefore"
-        },
-        {
-          "key": "s",
-          "name": "Insert snippet",
-          "type": "command",
-          "command": "editor.action.insertSnippet"
-        }
-      ]
     },
     {
       "key": "l",
@@ -665,19 +465,6 @@
       ]
     },
     {
-      "key": "M",
-      "name": "Minimap",
-      "type": "command",
-      "command": "editor.action.toggleMinimap"
-    },
-    {
-      "key": "n",
-      "name": "No Highlight",
-      "type": "command",
-      "command": "vscode-neovim.send",
-      "args": ":noh<CR>"
-    },
-    {
       "key": "o",
       "name": "Open...",
       "type": "bindings",
@@ -829,57 +616,6 @@
       ]
     },
     {
-      "key": "t",
-      "name": "Terminal...",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": "t",
-          "name": "Toggle Terminal",
-          "type": "command",
-          "command": "workbench.action.togglePanel"
-        },
-        {
-          "key": "T",
-          "name": "Focus Terminal",
-          "type": "command",
-          "command": "workbench.action.terminal.toggleTerminal",
-          "when": "!terminalFocus"
-        }
-      ]
-    },
-    {
-      "key": "u",
-      "name": "UI toggles...",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": "a",
-          "name": "Toggle tool/activity bar visibility",
-          "type": "command",
-          "command": "workbench.action.toggleActivityBarVisibility"
-        },
-        {
-          "key": "b",
-          "name": "Toggle side bar visibility",
-          "type": "command",
-          "command": "workbench.action.toggleSidebarVisibility"
-        },
-        {
-          "key": "j",
-          "name": "Toggle panel visibility",
-          "type": "command",
-          "command": "workbench.action.togglePanel"
-        },
-        {
-          "key": "F",
-          "name": "Toggle full screen",
-          "type": "command",
-          "command": "workbench.action.toggleFullScreen"
-        }
-      ]
-    },
-    {
       "key": "v",
       "name": "Split Vertical",
       "type": "command",
@@ -971,12 +707,6 @@
       "command": "workbench.view.extensions"
     },
     {
-      "key": "z",
-      "name": "Toggle zen mode",
-      "type": "command",
-      "command": "workbench.action.toggleZenMode"
-    },
-    {
       "key": " ",
       "name": "Find Files",
       "type": "command",
@@ -1014,14 +744,6 @@
       "y": 5
     }
   },
-  // "apc.electron": {
-  //   "titleBarStyle": "hidden",
-  //   "titleBarOverlay": {
-  //     "color": "#2f3241",
-  //     "symbolColor": "#74b1be",
-  //     "height": 60
-  //   }
-  // },
   "apc.font.family": "FiraCode Nerd Font",
   "apc.monospace.font.family": "FiraCode Nerd Font",
   "apc.statusBar": {
@@ -1056,5 +778,6 @@
   },
   "errorLens.exclude": ["TODO"],
   "workbench.layoutControl.enabled": false,
-  "dart.flutterSdkPath": "/Users/rv/dev/flutter"
+  "dart.flutterSdkPath": "/Users/rv/dev/flutter",
+  "editor.minimap.enabled": false
 }
