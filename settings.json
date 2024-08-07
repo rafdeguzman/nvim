@@ -10,7 +10,7 @@
   // ui
   "editor.minimap.enabled": false,
   "window.commandCenter": false,
-  "editor.scrollbar.vertical": "auto",
+  "editor.scrollbar.vertical": "hidden",
   "window.titleBarStyle": "custom",
   "editor.scrollbar.horizontal": "hidden",
 
@@ -35,6 +35,12 @@
   "whichkey.sortOrder": "alphabetically",
   "whichkey.delay": 0,
   "whichkey.bindings": [
+    {
+      "key": "T",
+      "name": "Show Todos",
+      "type": "command",
+      "command": "workbench.view.extension.todo-tree-container"
+    },
     {
       "key": "w",
       "name": "Save file",
@@ -998,20 +1004,29 @@
   "apc.activityBar": {
     "position": "bottom",
     "hideSettings": true,
-    "size": 28
+    "size": 24
   },
   "apc.electron": {
+    "frame": false,
     "titleBarStyle": "hiddenInset",
     "trafficLightPosition": {
-      "x": 12,
-      "y": 10
+      "x": 7,
+      "y": 5
     }
   },
+  // "apc.electron": {
+  //   "titleBarStyle": "hidden",
+  //   "titleBarOverlay": {
+  //     "color": "#2f3241",
+  //     "symbolColor": "#74b1be",
+  //     "height": 60
+  //   }
+  // },
   "apc.font.family": "FiraCode Nerd Font",
   "apc.monospace.font.family": "FiraCode Nerd Font",
   "apc.statusBar": {
     "position": "editor-bottom",
-    "height": 28,
+    "height": 24,
     "fontSize": 12
   },
   "workbench.iconTheme": "gruvbox-material-icon-theme",
@@ -1023,6 +1038,23 @@
   "terminal.explorerKind": "external",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "codesnap.realLineNumbers": true,
-  "codesnap.shutterAction": "copy"
+  "codesnap.shutterAction": "copy",
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+  "errorLens.decorations": {
+    "errorRange": {},
+    "warningRange": {},
+    "infoRange": {},
+    "hintRange": {}
+  },
+  "errorLens.exclude": ["TODO"],
+  "workbench.layoutControl.enabled": false,
+  "dart.flutterSdkPath": "/Users/rv/dev/flutter"
 }
-
